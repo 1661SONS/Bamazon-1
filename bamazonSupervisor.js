@@ -83,7 +83,7 @@ function addDept(){
 	inquirer.prompt([
 			{
 				type: 'input',
-				message: 'Please enter adepartment name:',
+				message: 'Please enter a department name:',
 				name: 'dept_name'
 			},
 			{

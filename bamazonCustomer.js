@@ -37,7 +37,7 @@ function inventoryTable() {
     connection.query('SELECT * FROM products', function(err, results) {  
             if (err) throw err;
             var table = new Table({   
-                head: [colors.cyan('ID'), colors.cyan('Item'), colors.cyan('Price'), colors.cyan('Quantity')],
+                head: [colors.cyan('ID'), colors.cyan('Product'), colors.cyan('Price'), colors.cyan('Quantity')],
                 colWidths: [5, 70, 13, 10]
             });
             for (var i = 0; i < results.length; i++){  

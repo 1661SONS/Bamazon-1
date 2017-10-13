@@ -37,7 +37,7 @@ function managerMenu(){
 			{
 			  type: 'list',
 			  message: 'Select Bamazon Management Activity:',
-			  choices: ["View Active Sale Items", "Review Low Stock Items", "Update Stock Levels", "Add Item", "Remove Item", "Exit"],
+			  choices: ["View Active Sale Items", "Review Low Stock Items", "Update Stock Levels", "Add Product", "Remove Product", "Exit"],
 			  name: 'options'
 			}
 		]).then(function(results){
@@ -53,10 +53,10 @@ function managerMenu(){
 					inventoryTable();
 					setTimeout(changeStockQty, 500);
 					break;
-				case "Add Item":
+				case "Add Product":
 					addItem();
 					break;
-        case "Remove Item":
+        case "Remove Product":
           inventoryTable();
           setTimeout(deleteItem, 500);
           break;
@@ -75,7 +75,7 @@ function inventoryTable() {
     connection.query('SELECT * from products', function(err, results) { 
             if (err) throw err;
             var table = new Table({   
-                head: ['ID', 'Item', 'Price', 'Quantity'],
+                head: ['ID', 'Product', 'Price', 'Quantity'],
                 colWidths: [5, 70, 13, 10]
             });
             for (var i = 0; i < results.length; i++){  
@@ -93,7 +93,7 @@ function reviewStock() {
     connection.query('SELECT * from products', function(err, results) { 
         if (err) throw err;
         var table = new Table({  //syntax to create table from cli-table npm
-            head: ['ID', 'Item', 'Price', 'Quantity'],
+            head: ['ID', 'Product', 'Price', 'Quantity'],
             colWidths: [5, 70, 13, 10]
         });
         for (var i = 0; i < results.length; i++){
@@ -157,7 +157,7 @@ function addItem(){
 	inquirer.prompt([
 			{
 				type: 'input',
-				message: 'Please enter item name.',
+				message: 'Please enter product name.',
 				name: 'item_name'
 			},
 			{
@@ -206,7 +206,7 @@ function deleteItem() {
   inquirer.prompt([
       {
         type: 'input',
-        message: 'What is the id # of the item you want to delete?',
+        message: 'What is the id # of the product you wish to delete?',
         name: 'product'
       },
   ]).then(function(answer){

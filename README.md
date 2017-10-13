@@ -41,7 +41,7 @@ The app has three core functions:
 	* Shopping App: 'node bamazonCustomer.js'
 	* Inventory Management System:'node bamazonManager.js'
 	* Supervisory System: 'node bamazonSupervisor.js
-4. Or watch the Videos!
+4. Or watch the Video!
 
 **Video**
-http://www.google.com
+https://youtu.be/dP4iGjV_Ar0
