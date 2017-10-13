@@ -38,8 +38,8 @@ The app has three core functions:
 4. Execute the sql in the bamazon.sql file to build the initial db and tables
 3. Run the following commands to perform the described activity:
 	* Shopping App: 'node bamazonCustomer.js'
-	* Inventory Management System - 'node bamazonManager.js'
-	* Supervisory System - 'node bamazonSupervisor.js
+	* Inventory Management System:'node bamazonManager.js'
+	* Supervisory System: 'node bamazonSupervisor.js
 4. Or watch the Videos!
 
 **Video**
