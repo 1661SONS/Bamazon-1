@@ -36,7 +36,7 @@ The app has three core functions:
 2. From a linux command line type: 'npm install'
 3. Setup mysql server
 4. Execute the sql in the bamazon.sql file to build the initial db and tables
-3. Run command depending which mode you would like to be on:
+3. Run the following commands to perform the described activity:
 	* Shopping App: 'node bamazonCustomer.js'
 	* Inventory Management System - 'node bamazonManager.js'
 	* Exective - 'node bamazonSupervisor.js
