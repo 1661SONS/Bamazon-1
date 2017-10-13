@@ -39,7 +39,7 @@ The app has three core functions:
 3. Run the following commands to perform the described activity:
 	* Shopping App: 'node bamazonCustomer.js'
 	* Inventory Management System - 'node bamazonManager.js'
-	* Exective - 'node bamazonSupervisor.js
+	* Supervisory System - 'node bamazonSupervisor.js
 4. Or watch the Videos!
 
 **Video**
