@@ -12,11 +12,12 @@ The app has three core functions:
 	* Provide totals for items purchased and a running total for that shopping session. 
 	* Allow the user to continue shopping until they've finished.
 2. Inventory Management System: 
-	* A management system view allowing the user to view all products and product details in a tabular fashion
+	* A management system enabling the user to view all products and its details in a tabular fashion
 	*  View enabling review of products with 5 items or less in the inventory
 	* Allow a manager to update product stock levels
+		-  Updated inventory levels are immediately viewable after the update.
 	* Allow a manager to dynamically add new items and associated data,  ie:  Item Name, Department, Cost, and Inventory levels. 
-		- Manager will be able to immediately view the updated inventory level. 
+		- The new product and its data are immediately viewable after the update.
 	* Allow a manager to remove products from the inventory.
 3. Supervisory System
 	* Allow a system supervisor to review product sale data by all departments. Including: 

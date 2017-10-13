@@ -18,8 +18,8 @@ connection.connect(function(err) {    //set up connection
 
 //Function to display the Title Banner
 function titleHeader() {
-  var storeFront = colors.white("⚙  Bamazon ");
-  var custPortal = colors.white("Inventory Management System ⚙ ");
+  var storeFront = colors.white("⚡  Bamazon ");
+  var custPortal = colors.white("Inventory Management System ⚡ ");
   var sfStyling = colors.cyan('══════════════════════════════');
 
   console.log(colors.blue('₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'));
