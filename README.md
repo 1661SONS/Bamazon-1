@@ -2,28 +2,28 @@
 ## App Purpose: 
 Provide an interactive Amazon-like CLI storefront using node.js & mysql server.
 
-##Overview: 
+Overview: 
 
 In this assignment I created a storefront using mysql server, node.js and the following NPM packages: inquirer, cli-tables, and colors. 
 
 The app has three core functions: 
-A. Shopping: 
-	1. Allow shoppers to select and purchase individual items in specific quantities.
-	2. Provide totals for items purchased and a running total for that shopping session. 
-	4. Allow the user to continue shopping until they've finished.
-B. Inventory Management System: 
-	1. A management system view allowing the user to view all products and product details in a tabular fashion
-	2. View enabling review of products with 5 items or less in the inventory
-	3. Allow a manager to update product stock levels
-	4. Allow a manager to dynamically add new items and associated data,  ie:  Item Name, Department, Cost, and Inventory levels. 
+1. Shopping: 
+	* Allow shoppers to select and purchase individual items in specific quantities.
+	* Provide totals for items purchased and a running total for that shopping session. 
+	* Allow the user to continue shopping until they've finished.
+2. Inventory Management System: 
+	* A management system view allowing the user to view all products and product details in a tabular fashion
+	*  View enabling review of products with 5 items or less in the inventory
+	* Allow a manager to update product stock levels
+	* Allow a manager to dynamically add new items and associated data,  ie:  Item Name, Department, Cost, and Inventory levels. 
 		- Manager will be able to immediately view the updated inventory level. 
-	5. Allow a manager to remove products from the inventory.
-C. Supervisory System
-	1. Allow a system supervisor to review product sale data by all departments. Including: 
-	* Overhead Costs
-	* Total Sales
-	* Total Profit
-	2. Enable a system supervisor to dynamically create new departments.
+	* Allow a manager to remove products from the inventory.
+3. Supervisory System
+	* Allow a system supervisor to review product sale data by all departments. Including: 
+		* Overhead Costs
+		* Total Sales
+		* Total Profit
+	* Enable a system supervisor to dynamically create new departments.
 
 **Files**
 * bamazonCustomer.js
