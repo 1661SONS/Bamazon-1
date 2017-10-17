@@ -6,14 +6,13 @@ const colors = require('colors');
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user: "root",                     //change to your user name if it is not root
-    password: "",     //change to your password or set up a keys.js file
-    database: "bamazon_db"               //import schema.sql & schema-seeds.sql to have the Bamazon db.
+    user: "root",                    
+    password: "",     
+    database: "bamazon_db"               
 });
 
 connection.connect(function(err) {    //set up connection
     if (err) throw err;
-    //console.log("connected as id " + connection.threadId);
 });
 
 //Function to display the Title Banner
@@ -128,7 +127,7 @@ function changeStockQty() {
 		var currentQuantity;
     //Select the record from products table with an item_id = the user's answer
 		connection.query('SELECT stock_quantity FROM products WHERE item_id=?', [product], function(err, results){
-			currentQuantity = parseInt(results[0].stock_quantity); //set var currentQuantity to value of stock_quantity of the record returned
+			currentQuantity = parseInt(results[0].stock_quantity); 
       //Update the stock_quantity to the user's adjustment qty
       connection.query('UPDATE products SET ? WHERE item_id=?',
 							[
@@ -137,7 +136,7 @@ function changeStockQty() {
 	            ],
             	function(err, results){
 					if (err) throw err;
-						if (quantity && product !== undefined) { //when var quantity & product are defined...
+						if (quantity && product !== undefined) { 
 							console.log("\n Stock is updated. Please review the adjustment:");
 							setTimeout(inventoryTable, 1500);
 							console.log("");
@@ -150,7 +149,6 @@ function changeStockQty() {
 
 //function to add a new item to the database
 function addItem(){
-  //connect to db to select the departments table to get department names for inquirer list below
   connection.query("SELECT * FROM departments", function(err, results) {
     if (err) throw err;
 
@@ -168,12 +166,12 @@ function addItem(){
 			{
 				type: 'list',
 				message: 'Please select a department for this item.',
-        choices: function() {                              //making the choices for departments a function
-          var choiceArray = [];                            //set an empty array
-          for (var i = 0; i < results.length; i++) {       //loop through the results
-            choiceArray.push(results[i].department_name);  //push each existing department name into the array
+        choices: function() {                             
+          var choiceArray = [];                            
+          for (var i = 0; i < results.length; i++) {       
+            choiceArray.push(results[i].department_name);  
           }
-          return choiceArray;                              //return the updated array as the list of choices to the user
+          return choiceArray;                             
         },
 				name: 'department_name'
 			},
@@ -191,7 +189,6 @@ function addItem(){
 			connection.query('INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES (?, ?, ?, ?)', [item_name, department_name, price, stock_quantity], function(err, results){
 				if(err) throw err;
 			});
-      //once all the answers have been supplied by the user...
 			if (item_name && price && stock_quantity && department_name !== undefined) {
         setTimeout(inventoryTable, 500);
 				setTimeout(managerMenu, 1500);
@@ -201,7 +198,7 @@ function addItem(){
   });
 };
 
-//function to delete a record from the database
+//Function delete a product from the database
 function deleteItem() {
   inquirer.prompt([
       {
@@ -225,7 +222,7 @@ function deleteItem() {
                 if (data.itemDelete) { 
                   connection.query('DELETE FROM products WHERE item_id=?', [product], function(err, results) {
                       if (err) throw err;
-                      console.log("\nThe item " + colors.yellow(item_name) + " has been "+ colors.white("DELETED")); //gives the user a message of the item that was deleted
+                      console.log("\nThe item " + colors.yellow(item_name) + " has been "+ colors.white("DELETED")); 
                       console.log("\nUpdating the item list......\n"); 
                       setTimeout(inventoryTable, 1000); 
                       setTimeout(managerMenu, 1500);    

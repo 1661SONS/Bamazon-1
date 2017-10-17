@@ -6,14 +6,13 @@ const colors = require('colors');
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user     : 'root',                      //change to your user name if it is not root
-    password : "",          //change to your password or set up a keys.js file
-    database : 'bamazon_db'                    //import schema.sql & schema-seeds.sql to have the Bamazon db.
+    user     : 'root',                     
+    password : "",         
+    database : 'bamazon_db'                    
 });
 
 connection.connect(function(err) {
     if (err) throw err;
-    //console.log("connected as id " + connection.threadId);
 });
 
 //Function to display the Title Banner
@@ -59,7 +58,7 @@ function supervisoryMenu(){
 
 supervisoryMenu(); 
 
-//Function to print the depat table
+//Function to print the dept table
 function deptTable() {
     connection.query('SELECT * FROM departments', function(err, results) {        
             if (err) throw err;
